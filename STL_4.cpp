@@ -9,7 +9,7 @@ int main()
     int k, t;
     bool flag = false;
     vector<int>a = { 45, 45, 38, 37, 22, 22, 22, 11, 10, 1 };
-    cout << "Введіть k: ";
+    cout << "Input k: ";
     cin >> k;
     for (int i = 0; i < a.size(); i++)
     {
