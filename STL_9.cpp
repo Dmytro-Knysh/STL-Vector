@@ -16,10 +16,10 @@ int main()
     for (int i = 0; i < k; i++)
         for (int j = 0; j < p; j++)
         {
-            cout << "Введіть matrix[" << i << "][" << j << "]: ";
+            cout << "Input matrix[" << i << "][" << j << "]: ";
             cin >> matrix[i][j];
         }
-    cout << "Умова: " << endl;
+    cout << "Condition: " << endl;
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix[i].size(); j++)
@@ -28,12 +28,12 @@ int main()
         }
         cout << endl;
     }
-    cout << "Головна діагональ: ";
+    cout << "Home diagonal: ";
     for (int i = 0; i < matrix.size(); i++)
     {
         cout << matrix[i][i] << " ";
     }
-    cout << endl << "Побічна діагональ: ";
+    cout << endl << "Side diagonal: ";
     for (int i = 0; i < matrix.size(); i++)
     {
         cout << matrix[i][matrix.size() - 1 - i] << " ";
