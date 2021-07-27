@@ -17,10 +17,10 @@ int main()
     for (int i = 0; i < k; i++)
         for (int j = 0; j < p; j++)
         {
-            cout << "Введіть matrix[" << i << "][" << j << "]: ";
+            cout << "Input matrix[" << i << "][" << j << "]: ";
             cin >> matrix[i][j];
         }
-    cout << "Умова: " << endl;
+    cout << "Condition: " << endl;
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix[i].size(); j++)
@@ -29,7 +29,7 @@ int main()
         }
         cout << endl;
     }
-    //Поміняти місцями перший та останній рядки, елементи яких утворюють арифметичну прогресію.
+    //Swap the first and last lines, the elements of which form an arithmetic progression.
     int q;
     for (int i = 0; i < matrix.size(); i++)
     {
@@ -54,7 +54,7 @@ int main()
         int y = task_1[0];
         int x = task_1[task_1.size() - 1];
         matrix[y].swap(matrix[x]);
-        cout << "Перше завдання: " << endl;
+        cout << "Task 1: " << endl;
         for (int i = 0; i < matrix.size(); i++)
         {
             for (int j = 0; j < matrix[i].size(); j++)
@@ -64,7 +64,7 @@ int main()
             cout << endl;
         }
     }
-    //Поміняти місцями перший стовпець, що містить більше парних значень, ніж непарних, з першим стовпцем, що містить менше парних значень ніж непарних.
+    //Swap the first column that contains more even values ​​than odd, with the first column that contains fewer even values ​​than odd.
     for (int i = 0; i < p; i++)
     {
         for (int j = 0; j < matrix.size() && flag; j++)
@@ -111,7 +111,7 @@ int main()
     {
         for (int i = 0; i < matrix.size(); i++)
             swap(matrix[i][t_1], matrix[i][t_2]);
-        cout << "Друге завдання: " << endl;
+        cout << "Task 2: " << endl;
         for (int i = 0; i < k; i++)
         {
             for (int j = 0; j < p; j++)
@@ -123,7 +123,7 @@ int main()
     }
     else
     {
-        cout << "Неможливо виконати друге завдання";
+        cout << "Unable to complete second task";
     }
     return 0;
 }
