@@ -9,7 +9,7 @@ int main()
     SetConsoleOutputCP(1251);
     int k, p, n, s = 0;
     bool flag = false;
-    cout << "Введіть k, p: ";
+    cout << "Input k, p: ";
     cin >> k >> p;
     vector <vector<int> > matrix(k, vector<int>(p, 0));
     vector<int> task_1; 
@@ -18,10 +18,10 @@ int main()
     for (int i = 0; i < k; i++)
         for (int j = 0; j < p; j++)
         {
-            cout << "Введіть matrix[" << i << "][" << j << "]: ";
+            cout << "Input matrix[" << i << "][" << j << "]: ";
             cin >> matrix[i][j];
         }
-    cout << "Умова: " << endl;
+    cout << "Condition: " << endl;
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix[i].size(); j++)
@@ -30,7 +30,7 @@ int main()
         }
         cout << endl;
     }
-    //1) Перед рядком, елементи якого парні вставити рядок з двійками.
+    //1)In front of the line, the elements of which are even, insert a line with twos.
     for (int i = 0; i < matrix.size() && flag == false; i++)
     {
         for (int j = 0; j < matrix[i].size(); j++)
@@ -44,7 +44,6 @@ int main()
         if (s == matrix[i].size())
         {
             flag = true;
-            //break;
         }
         else
         {
@@ -67,9 +66,9 @@ int main()
     }
     else
     {
-        cout << "Неможливо виконати перше завадання" << endl;
+        cout << "Unable to perform first interference" << endl;
     }
-    //Після стовпця, що містить мінімальний елемент матриці вставити стовпець з нулями.
+    //After the column containing the minimum element of the matrix, insert the column with zeros.
     int min = matrix[0][0] +1;
     int min_index = -1;
     for (int i = 0; i < p; i++)
@@ -95,7 +94,7 @@ int main()
     }
     else
     {
-        cout << "Неможливо виконати друге завдання";
+        cout << "Unable to complete second task";
     }
     return 0;
 }
