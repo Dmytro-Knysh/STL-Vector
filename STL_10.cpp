@@ -10,16 +10,16 @@ int main()
     int k, p, h = 0, q = 0, v = 0, sum = 0, d = 0;
     bool flag = false;
     bool flag_1 = false;
-    cout << "Введіть k, p ( p >= k ): ";
+    cout << "Input k, p ( p >= k ): ";
     cin >> k >> p;
     vector <vector<int> > matrix(k, vector<int>(p, 0));
     for (int i = 0; i < k; i++)
         for (int j = 0; j < p; j++)
         {
-            cout << "Введіть matrix[" << i << "][" << j << "]: ";
+            cout << "Input matrix[" << i << "][" << j << "]: ";
             cin >> matrix[i][j];
         }
-    cout << "Умова: " << endl;
+    cout << "Condition: " << endl;
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix[i].size(); j++)
@@ -28,7 +28,7 @@ int main()
         }
         cout << endl;
     }
-    //Знайти кільькості додатних елементів для головної діагоналі та для всіх діагоналей, що їй паралельні.
+    //Find the number of positive elements for the main diagonal and for all diagonals parallel to it.
     for (int i = 0; i < matrix.size(); i++)
     {
         h = i;
@@ -69,8 +69,8 @@ int main()
         }
         d++;
     }
-   cout << "Кількість додатних елементів для головної діагоналі та для всіх діагоналей, що їй паралельні: " << q << endl;
-    //Знайти суми непарних значень для елементів побічної діагоналі та для кожної діагоналі, що їй паралельні
+   cout << "Number of positive elements for the main diagonal and for all diagonals parallel to it: " << q << endl;
+    // Find the sums of odd values for the elements of the side diagonal and for each diagonal parallel to it
     int u = 0;
     int t = 0;
     for (int j = 2; j < d+1/2; j++)
@@ -103,7 +103,7 @@ int main()
         t++;
 
     }
-    cout << "Сума непарних значень для елементів побічної діагоналі та для кожної діагоналі, що їй паралельні: " << sum;
+    cout << "The sum of odd values ​​for the elements of the side diagonal and for each diagonal parallel to it: " << sum;
     return 0;
 }
 
