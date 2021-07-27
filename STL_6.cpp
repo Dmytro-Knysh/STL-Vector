@@ -15,7 +15,7 @@ int main()
     for (int i = 0; i < k; i++)
         for (int j = 0; j < p; j++)
         {
-            cout << "Введіть matrix[" << i << "][" << j << "]: ";
+            cout << "Input matrix[" << i << "][" << j << "]: ";
             cin >> matrix[i][j];
         }
     cout << "Умова: " << endl;
@@ -27,7 +27,7 @@ int main()
         }
         cout << endl;
     }
-    //1) рядок, в якому сума елементів максимальна;
+    //1) the line in which the sum of elements is the maximum;
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix[i].size(); j++)
@@ -48,7 +48,7 @@ int main()
         }
     }
     matrix.erase(matrix.begin() + index);
-    cout << "Перше завдання: " << endl;
+    cout << "Task 1: " << endl;
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix[i].size(); j++)
@@ -57,7 +57,7 @@ int main()
         }
         cout << endl;
     }
-    //2) останній стовбець, в якому всі елементи від’ємні.
+    //2)the last column in which all elements are negative.
     index = -1;
     for (int i = 0; i <matrix[i].size(); i++)
     {
@@ -81,7 +81,7 @@ int main()
             matrix[i].erase(matrix[i].begin() + index);
         }
 
-        cout << "Друге завдання: " << endl;
+        cout << "Task 2: " << endl;
         for (int i = 0; i < matrix.size(); i++)
         {
             for (int j = 0; j < matrix[i].size(); j++)
@@ -93,7 +93,7 @@ int main()
     }
     else
     {
-        cout << "Неможливо виконати друге завдання";
+        cout << "Unable to complete second task";
     }
     return 0;
 }
