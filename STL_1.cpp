@@ -38,6 +38,6 @@ int main()
         }
         p = a[i];
     }
-    cout << "Кількість серій: " << z<<" Розмір масиву:"<<a.size();
+    cout << "Number of series: " << z<<" Array size:"<<a.size();
 	return 0;
 }
