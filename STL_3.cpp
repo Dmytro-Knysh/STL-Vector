@@ -10,9 +10,9 @@ int main()
     SetConsoleOutputCP(1251);
     int first_value, last_value, n, k, m, p = 0, q = 0, random_number;
     vector<int>a;
-    cout << "Введіть розмір масиву: ";
+    cout << "Enter the size of the array: ";
     cin >> n;
-    cout << endl << "Введіть діапазон (a,b): ";
+    cout << endl << "Enter the range (a, b): ";
     cin >> first_value >> last_value;
     cout << endl << "Введіть k: ";
     cin >> k;
@@ -27,7 +27,7 @@ int main()
         cout << a[i] << " ";
     }
     cout << endl;
-    //зсув вліво поступово рухаючи елементи
+    //shift to the left gradually moving the elements
     for (int j = 0; j < k; j++)
     {
         for (int i = 0; i < a.size() / 2 - 1; i++)
@@ -37,7 +37,7 @@ int main()
 
         }
     }
-    //зсув вліво за допомогую методів класу вектор
+    //shift to the left using vector class methods
     for (int i = 0; i < k; i++)
     {
       a.insert(a.begin() + a.size() / 2, 0);
@@ -55,13 +55,13 @@ int main()
             m = i;
         }
     }
-    //зсув вправо за допомогую методів класу вектор
+    //shift to the right using vector class methods
     for (int i = 0; i < k; i++)
     {
       a.insert(a.begin()+m, 0);
       a.erase(a.begin() + a.size() - 1);
     }
-    //зсув вправо поступово рухаючи елементи
+    //shift to the right gradually moving the elements
     for (int j = 0; j < k; j++)
     {
         for (int i = a.size() - 1; i > m; i--)
